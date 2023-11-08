@@ -7,3 +7,6 @@
 ::ffff:172.18.0.1 - - [08/Nov/2023:12:11:19 +0000] "GET /goals HTTP/1.1" 200 120 "http://127.0.0.1:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
 ::ffff:172.18.0.1 - - [08/Nov/2023:12:11:20 +0000] "GET /goals HTTP/1.1" 304 - "http://127.0.0.1:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
 ::ffff:172.18.0.1 - - [08/Nov/2023:12:11:21 +0000] "GET /goals HTTP/1.1" 304 - "http://127.0.0.1:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
+::ffff:172.18.0.1 - - [08/Nov/2023:17:55:30 +0000] "GET /goals HTTP/1.1" 304 - "http://127.0.0.1:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
+::ffff:172.18.0.1 - - [08/Nov/2023:17:57:25 +0000] "GET /goals HTTP/1.1" 304 - "http://127.0.0.1:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
+::ffff:172.18.0.1 - - [08/Nov/2023:17:58:03 +0000] "GET /goals HTTP/1.1" 304 - "http://127.0.0.1:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"

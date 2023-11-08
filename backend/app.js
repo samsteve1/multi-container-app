@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+var cors =  require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -18,13 +18,13 @@ const accessLogStream = fs.createWriteStream(
 app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(bodyParser.json());
-
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
+app.options('*', cors());
 
 app.get('/goals', async (req, res) => {
   console.log('TRYING TO FETCH GOALS');
@@ -83,8 +83,10 @@ app.delete('/goals/:id', async (req, res) => {
   }
 });
 
+//app.listen(3000);
+
 mongoose.connect(
-  'mongodb://localhost:27017/course-goals',
+  `mongodb://${process.env.db_username}:${process.env.db_password}@goals-app-db:27017/course-goals?authSource=admin`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -94,8 +96,8 @@ mongoose.connect(
       console.error('FAILED TO CONNECT TO MONGODB');
       console.error(err);
     } else {
-      console.log('CONNECTED TO MONGODB');
-      app.listen(80);
+      console.log('CONNECTED TO MONGODB!');
+      app.listen(3000);
     }
   }
 );
